@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Home from './Pages/Home/Home';
+import OrderReview from './My-Order/OrderReview';
+import Service from './Pages/Home/Service';
+import Login from './Authentication/Login';
+import Header from './Pages/Home/Header';
+import NotFound from './NotFound/NotFound';
+import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
+import AddNewService from './components/AddNewService/AddNewService';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Router>
+       <Header/>
+       <Switch>
+         <Route exact path='/'>
+           <Home/>
+         </Route>
+         <Route path='/home'>
+           <Home/>
+         </Route>
+         <Route path='/home#service'>
+           <Service/>
+         </Route>
+         <Route path='/myOrder'>
+           <OrderReview/>
+         </Route>
+         <Route path='/manageAllOrders'>
+           <ManageAllOrders/>
+         </Route>
+         <Route path='/addNewService'>
+           <AddNewService/>
+         </Route>
+         <Route path='/myOrder'>
+           <OrderReview/>
+         </Route>
+         <Route path='/login'>
+           <Login/>
+         </Route>
+         <Route path='*'>
+           <NotFound/>
+         </Route>
+         
+       </Switch>
+     </Router>
     </div>
   );
 }

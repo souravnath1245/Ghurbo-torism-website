@@ -1,0 +1,19 @@
+.formSection{
+    background-color: grey;
+    padding: 80px;
+}
+.addFormSection{
+    width: 1000px;
+    background-color: white;
+    padding: 40px;
+    
+}
+.addFormSection input,textarea {
+    width: 80%;
+    margin-top:10px;
+    margin-bottom: 40px;
+    padding: 6px
+}
+.addFormSection .submit{
+    width: 20%;
+}

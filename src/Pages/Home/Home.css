@@ -1,0 +1,28 @@
+.serviceHeader{
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+.serviceContent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;   
+    
+}
+.content{
+    position: relative;
+    background-color: rgba(224, 220, 220, 0.582);
+}
+.serviceTitle{
+    position: absolute;
+    width: 300px;
+    bottom: 180px;
+    left: 50px;
+    color: white;
+    text-transform: uppercase;
+}
+.servicePara{
+    width: 380px;
+
+}

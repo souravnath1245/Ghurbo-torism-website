@@ -31,7 +31,7 @@ const AddNewService = () => {
   };
 
   return (
-    <div className="container formSection">
+    <div className="container formSection" fluid="sm">
       <div className="addFormSection mx-auto">
         <h1 className="text-center">Add Destination</h1>
         <div className="destinationSection mx-auto">
@@ -54,7 +54,11 @@ const AddNewService = () => {
               <input ref={imageRef} type="text" name="" id="" />
               <br />
             </div>
-            <input className="submit" type="submit" value="submit" />
+            <input
+              className="submit btn btn-warning"
+              type="submit"
+              value="submit"
+            />
           </form>
         </div>
       </div>

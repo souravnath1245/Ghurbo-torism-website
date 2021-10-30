@@ -24,10 +24,11 @@ const Login = () => {
           Google SignIn{" "}
         </button>
         <br />
-        <span className="my-2">Please Create Account First </span>
+        <p className="my-2 loginpara">Please Create Account First  
         <Link to="/register">
           <a href="">Create an Account </a>
         </Link>
+        </p>
       </div>
     </div>
   );

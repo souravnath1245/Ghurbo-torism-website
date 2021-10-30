@@ -1,28 +1,42 @@
-.serviceHeader{
-    font-size: 55px;
-    text-transform: uppercase;
-    font-weight: 700;
-    
+.serviceHeader {
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
-.serviceContent{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;   
-    
+.serviceContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
-.content{
-    position: relative;
-    background-color: rgba(224, 220, 220, 0.582);
+.content {
+  position: relative;
+  background-color: rgba(224, 220, 220, 0.582);
 }
-.serviceTitle{
-    position: absolute;
-    width: 300px;
-    bottom: 180px;
-    left: 50px;
-    color: white;
-    text-transform: uppercase;
+.serviceTitle {
+  position: absolute;
+  width: 300px;
+  bottom: 180px;
+  left: 50px;
+  color: white;
+  text-transform: uppercase;
 }
-.servicePara{
-    width: 380px;
-
+.servicePara {
+  width: 380px;
+}
+@media screen and (max-width: 600px) {
+  .serviceContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .serviceTitle{
+      position:relative;
+      text-align: center;
+        left:0;
+  }
+  .servicePara{
+      width: 300px;
+      text-align: center;
+  }
+  .button{
+      text-align: center;
+  }
 }

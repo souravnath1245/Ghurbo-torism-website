@@ -1,6 +1,10 @@
 .footerSection{
-    
     background-color: black;
     color:white;
     padding:  30px 1px;
+}
+@media screen and (max-width: 600px) {
+    .footerSection{
+        padding: 20px 1px;
+    }
 }

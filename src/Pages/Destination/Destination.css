@@ -16,18 +16,14 @@
 .tourDetailsContent{
     width: 500px;
 }
-.package{
-    background-color: #f2f2f2;
-    padding: 60px 20px;
-}
-.packageHeader{
-    margin-bottom: 40px;
-}
-.packageForm input,.datePicker{
-    width: 90%;
-    margin-bottom: 30px;
-    padding: 8px;
-}
-.formSubmit{
-    width: 30%;
+@media screen and (max-width: 600px) {
+    .tourDetails .image{
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .tourDetailsContent{
+        width: 300px;
+        margin: 0 auto;
+    }
 }

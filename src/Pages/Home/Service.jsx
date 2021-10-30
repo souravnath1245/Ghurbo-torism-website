@@ -19,15 +19,17 @@ const Service = () => {
             <div className="image text-center">
               <img src={service.image} alt="" />
             </div>
-            <h3 className="serviceTitle">
+            <h3 className="serviceTitle mx-auto">
               {service.place}, {service.country}
             </h3>
-            <p className="servicePara ms-2 my-3 ps-4">
+            <p className="servicePara mx-auto ">
               {service.description.slice(0, 200)}
             </p>
-            <Link to={`destination/${service._id}`}>
-              <button className="btn btn-warning ms-4 ">Add to Cart</button>
-            </Link>
+            <div className="button ms-lg-4">
+              <Link to={`destination/${service._id}`}>
+                <button className=" btn btn-warning ">Add to Cart</button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>

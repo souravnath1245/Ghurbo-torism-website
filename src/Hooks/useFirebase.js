@@ -45,6 +45,7 @@ const useFirebase = () => {
     users,
     error,
     logOut,
+    setUsers
   };
 };
 

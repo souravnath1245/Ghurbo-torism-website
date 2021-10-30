@@ -1,12 +1,12 @@
 .formSection{
-    background-color: grey;
+    background-color: #dddbdb;
     padding: 80px;
 }
 .addFormSection{
     width: 1000px;
     background-color: white;
     padding: 40px;
-    
+    border-radius: 20px;
 }
 .addFormSection input,textarea {
     width: 80%;
@@ -16,4 +16,22 @@
 }
 .addFormSection .submit{
     width: 20%;
+}
+@media screen and (max-width: 600px) {
+    .formSection{
+        padding: 2px;
+        background-color: white;
+    }
+    .addFormSection{
+        width: 300px;
+        padding: 1px
+    }
+    .addFormSection input,textarea {
+        width: 100%;
+        margin-top:10px;
+        margin-bottom: 25px;
+    }
+    .addFormSection .submit{
+        width: 40%;
+    }
 }

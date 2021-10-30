@@ -12,6 +12,8 @@ import AddNewService from "./components/AddNewService/AddNewService";
 import RegisterClients from "./Admin/RegisterClients";
 import AuthProvider from "./Contex/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Registation from "./Authentication/Registation";
+import Admin from "./Admin/Admin";
 
 function App() {
   return (
@@ -35,10 +37,12 @@ function App() {
             <Route path="/destination/add">
               <AddNewService />
             </Route>
-            <Route path="/registerList">
+            <Route exact path="/registerList">
               <RegisterClients />
             </Route>
-
+            <PrivateRoute path="/register">
+              <Registation />
+            </PrivateRoute>
             <PrivateRoute path="/destination/:id">
               <Destination />
             </PrivateRoute>
@@ -48,6 +52,9 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
+            <PrivateRoute path="/admin">
+              <Admin />
+            </PrivateRoute>
             <Route path="*">
               <NotFound />
             </Route>

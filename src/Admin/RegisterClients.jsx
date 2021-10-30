@@ -1,29 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
-
 const RegisterClients = () => {
   const [clints, setClints] = useState([]);
-   
 
-  const handleClientDelete =(id)=>{
+  const handleClientDelete = (id) => {
     console.log(id);
-    fetch(`http://localhost:4000/destination/users/${id}`, {
+    fetch(`https://pure-meadow-98314.herokuapp.com/destination/users/${id}`, {
       method: "DELETE",
       // headers: {
       //   "Contenet-Type" : "aplication/json"
       // },
-
-    }).then(res => res.json())
-    .then(data => {
-      if(data.deletedCount > 0){
-        alert("Successfully Delete");
-        const remainingUsers = clints.filter(user => user._id !==id)
-        setClints(remainingUsers)
-      }
     })
-    
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          alert("Successfully Delete");
+          const remainingUsers = clints.filter((user) => user._id !== id);
+          setClints(remainingUsers);
+        }
+      });
+  };
   useEffect(() => {
     fetch(`https://pure-meadow-98314.herokuapp.com/destination/users`)
       .then((res) => res.json())
@@ -31,8 +28,6 @@ const RegisterClients = () => {
   }, []);
   return (
     <div className="registerClientSection">
-      
-
       <div className="registerClientHeader">
         <h1>Register List </h1>
         <div className="registerClient">

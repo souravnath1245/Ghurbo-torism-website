@@ -5,7 +5,7 @@ const RegisterClients = () => {
   const [clints, setClints] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/destination/users`)
+    fetch(`https://pure-meadow-98314.herokuapp.com/destination/users`)
       .then((res) => res.json())
       .then((data) => setClints(data));
   }, []);
@@ -27,7 +27,6 @@ const RegisterClients = () => {
             <Table striped bordered hover variant="dark">
               <thead>
                 <tr>
-                  
                   <th>Clints Name</th>
                   <th>Clints EmailID</th>
                   <th>Registation Data</th>

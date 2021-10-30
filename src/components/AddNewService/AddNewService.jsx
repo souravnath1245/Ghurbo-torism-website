@@ -13,7 +13,7 @@ const AddNewService = () => {
     const image = imageRef.current.value;
     const newUser = { country, place, description, image };
 
-    fetch("http://localhost:4000/destination", {
+    fetch("https://pure-meadow-98314.herokuapp.com/destination", {
       method: "POST",
       headers: {
         "content-type": "application/json",

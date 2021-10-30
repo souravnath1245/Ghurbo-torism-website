@@ -9,7 +9,7 @@ const Destination = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/destination/${id}`)
+    fetch(`https://pure-meadow-98314.herokuapp.com/destination/${id}`)
       .then((res) => res.json())
       .then((data) => setLocation(data));
   }, []);
@@ -27,7 +27,7 @@ const Destination = () => {
     const user = { name, email, phone, date };
     console.log(user);
 
-    fetch("http://localhost:4000/destination/users", {
+    fetch("https://pure-meadow-98314.herokuapp.com/destination/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -82,7 +82,11 @@ const Destination = () => {
               />
               <input ref={phoneRef} type="number" placeholder="Phone" />
               <br />
-              <input className="formSubmit btn btn-warning" type="submit" value="submit" />
+              <input
+                className="formSubmit btn btn-warning"
+                type="submit"
+                value="submit"
+              />
             </form>
           </div>
         </div>

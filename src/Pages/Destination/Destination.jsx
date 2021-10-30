@@ -24,7 +24,7 @@ const Destination = () => {
     const phone = phoneRef.current.value;
     const date = startDate;
 
-    const user = { name, email, phone ,date};
+    const user = { name, email, phone, date };
     console.log(user);
 
     fetch("http://localhost:4000/destination/users", {
@@ -50,7 +50,7 @@ const Destination = () => {
         <h1 className="text-center"> Tour Package Details</h1>
       </div>
       <div className="container  mx-auto row justify-content-center align-items-center">
-        <div className="tourDetails col-lg-8">
+        <div className="tourDetails col-lg-7">
           <div className="image">
             <img src={location.image} alt="" />
           </div>
@@ -62,7 +62,7 @@ const Destination = () => {
             <p>{location.description}</p>
           </div>
         </div>
-        <div className="package col-lg-4">
+        <div className="package col-lg-5">
           <div className="packageHeader">
             <h1>Book This package</h1>
           </div>
@@ -74,6 +74,7 @@ const Destination = () => {
               <br />
 
               <DatePicker
+                className="datePicker"
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
                 selectsStart // tells this DatePicker that it is part of a range*
@@ -81,7 +82,7 @@ const Destination = () => {
               />
               <input ref={phoneRef} type="number" placeholder="Phone" />
               <br />
-              <input type="submit" value="submit" />
+              <input className="formSubmit btn btn-warning" type="submit" value="submit" />
             </form>
           </div>
         </div>

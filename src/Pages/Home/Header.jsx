@@ -1,10 +1,10 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import useFirebase from "../../Hooks/useFirebase";
+import useAuth from "../../Hooks/useAuth";
 
 const Header = () => {
-  const { users, logOut } = useFirebase();
+  const { users, logOut } = useAuth();
 
   const handleLogOut = () => {
     logOut();
@@ -28,7 +28,7 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/home#service">
               Service
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/destination">
+            <Nav.Link as={HashLink} to="/destination/:id">
               Destination
             </Nav.Link>
             <Nav.Link as={HashLink} to="/myOrder">

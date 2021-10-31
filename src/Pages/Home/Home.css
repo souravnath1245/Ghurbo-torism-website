@@ -8,6 +8,11 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+.destinationContent{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
 .content {
   position: relative;
   background-color: rgba(224, 220, 220, 0.582);
@@ -23,20 +28,53 @@
 .servicePara {
   width: 380px;
 }
+.adventureSection {
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgba(235, 235, 235, 0.719);
+}
+.adventureHeader {
+  padding-bottom: 40px;
+}
+.leftDiv {
+  background-image: url("https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/coming-soon-background-img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: initial;
+}
+.adventureContent {
+  margin: 0 auto;
+  color: white;
+}
+.contactSection{
+  background-color: rgba(26, 26, 26, 0.938);
+  padding-top: 40px;
+}
+.contactLink .icon{
+  padding-right: 20px;
+  color:chartreuse;
+  font-size: 23px;
+}
+.contactLink a{
+  text-decoration: none;
+}
 @media screen and (max-width: 600px) {
   .serviceContent {
     grid-template-columns: repeat(1, 1fr);
   }
-  .serviceTitle{
-      position:relative;
-      text-align: center;
-        left:0;
+  .destinationContent{
+    grid-template-columns: repeat(1, 1fr);
   }
-  .servicePara{
-      width: 300px;
-      text-align: center;
+  .serviceTitle {
+    position: relative;
+    text-align: center;
+    left: 0;
   }
-  .button{
-      text-align: center;
+  .servicePara {
+    width: 300px;
+    text-align: center;
+  }
+  .button {
+    text-align: center;
   }
 }

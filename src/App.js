@@ -12,8 +12,9 @@ import AddNewService from "./components/AddNewService/AddNewService";
 import RegisterClients from "./Admin/RegisterClients";
 import AuthProvider from "./Contex/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Registation from "./Authentication/Registation";
+// import Registation from "./Authentication/Registation";
 import Admin from "./Admin/Admin";
+import TourDestination from "./Pages/Destination/TourDestination";
 
 function App() {
   return (
@@ -40,8 +41,8 @@ function App() {
             <Route exact path="/registerList">
               <RegisterClients />
             </Route>
-            <PrivateRoute path="/register">
-              <Registation />
+            <PrivateRoute path="/tourDestination">
+              <TourDestination />
             </PrivateRoute>
             <PrivateRoute path="/destination/:id">
               <Destination />

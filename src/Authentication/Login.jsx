@@ -5,7 +5,7 @@ import { useLocation, useHistory } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
-  const { signInUsingGoogle } = useAuth();
+  const { setIsLoading, signInUsingGoogle } = useAuth();
   const history = useHistory();
   const location = useLocation();
   const redirect_uri = location.state?.from || "/home";
@@ -15,6 +15,7 @@ const Login = () => {
     .then((result) => {
       history.push(redirect_uri);
     })
+    .finally(() => setIsLoading(false));
   };
   return (
     <div className="loginPage">

@@ -13,8 +13,8 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Your Journey Begins</h3>
+            <p>A journey of a 1000 miles starts with a single step. Import the full demo content with 1 click and create a head-turning website for your travel agency.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -25,8 +25,8 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Your Journey Begins</h3>
+            <p>A journey of a 1000 miles starts with a single step. Import the full demo content with 1 click and create a head-turning website for your travel agency.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -37,10 +37,9 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>Your Journey Begins</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            A journey of a 1000 miles starts with a single step. Import the full demo content with 1 click and create a head-turning website for your travel agency.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

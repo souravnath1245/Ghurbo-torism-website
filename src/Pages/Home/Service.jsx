@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 const Service = () => {
   const [services, setServices] = useState([]);
+
+  const handleAddItem =(id)=>{
+    
+      console.log(id);
+  }
   useEffect(() => {
     fetch("https://pure-meadow-98314.herokuapp.com/destination")
       .then((res) => res.json())
@@ -27,7 +32,7 @@ const Service = () => {
             </p>
             <div className="button ms-lg-4">
               <Link to={`destination/${service._id}`}>
-                <button className=" btn btn-warning ">Add to Cart</button>
+                <button onClick={()=>handleAddItem(service._id)}  className=" btn btn-warning ">Add to Cart</button>
               </Link>
             </div>
           </div>

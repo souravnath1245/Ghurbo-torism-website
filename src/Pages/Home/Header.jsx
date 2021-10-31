@@ -28,23 +28,20 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/home#service">
               Service
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/destination/:id">
-              Destination
+            <Nav.Link as={HashLink} to="/home#adventure">
+              Adventure
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/register">
-              Registar
+            <Nav.Link as={HashLink} to="/home#contact">
+              Contact
+            </Nav.Link>
+
+            <Nav.Link as={HashLink} to="/tourDestination">
+              Destination
             </Nav.Link>
             <Nav.Link as={HashLink} to="/myOrder">
               My-Order
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/admin">
-              <button
-               
-                className="btn btn-outline-primary text-white mx-2"
-              >
-                Admin
-              </button>
-            </Nav.Link>
+            
 
             {users?.email ? (
               <Navbar.Text>
@@ -65,6 +62,11 @@ const Header = () => {
                 Login
               </Nav.Link>
             )}
+            <Nav.Link as={HashLink} to="/admin">
+              <button className="btn btn-outline-primary text-white mx-2">
+                Admin
+              </button>
+            </Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>

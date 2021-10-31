@@ -15,7 +15,7 @@ const Adventure = () => {
               Meet different cultures, traditions and landscapes. Choose your
               next destination and start your trip.
             </p>
-            <a href="https://wanderers.qodeinteractive.com/tour-search-page/?view_type=standard" alt="More about advanture" target="_blank" className="text-uppercase">
+            <a  href="https://wanderers.qodeinteractive.com/tour-search-page/?view_type=standard" alt="More about advanture" target="_blank" className="text-uppercase">
               See More
             </a>
           </div>

@@ -11,7 +11,7 @@ import initialAuthrentication from "../Firebase/firebase.init";
 initialAuthrentication();
 const useFirebase = () => {
   const [users, setUsers] = useState([]);
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
   const auth = getAuth();
@@ -46,7 +46,6 @@ const useFirebase = () => {
   return {
     signInUsingGoogle,
     users,
-    error,
     isLoading,
     setIsLoading,
     logOut,

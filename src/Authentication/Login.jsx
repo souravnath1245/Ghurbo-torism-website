@@ -27,7 +27,7 @@ const Login = () => {
         <br />
         <p className="my-2 loginpara">Please Create Account First  
         <Link to="/register">
-          <a href="">Create an Account </a>
+          <p>Create an Account.</p>
         </Link>
         </p>
       </div>

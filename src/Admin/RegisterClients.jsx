@@ -5,21 +5,20 @@ const RegisterClients = () => {
   const [clints, setClints] = useState([]);
 
   const handleClientDelete = (id) => {
-    console.log(id);
-    fetch(`https://pure-meadow-98314.herokuapp.com/destination/users/${id}`, {
-      method: "DELETE",
-      // headers: {
-      //   "Contenet-Type" : "aplication/json"
-      // },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.deletedCount > 0) {
-          alert("Successfully Delete");
-          const remainingUsers = clints.filter((user) => user._id !== id);
-          setClints(remainingUsers);
-        }
-      });
+    const proceed = window.confirm("Are You Sure, You Want To Delete? ")
+    if (proceed) {
+      fetch(`https://pure-meadow-98314.herokuapp.com/destination/users/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            alert("Successfully Delete");
+            const remainingUsers = clints.filter((user) => user._id !== id);
+            setClints(remainingUsers);
+          }
+        });
+    }
   };
   useEffect(() => {
     fetch(`https://pure-meadow-98314.herokuapp.com/destination/users`)

@@ -3,7 +3,6 @@ import { useParams } from "react-router";
 import DatePicker from "react-datepicker";
 import { useHistory, useLocation } from "react-router";
 
-
 import "./Destination.css";
 import useAuth from "../../Hooks/useAuth";
 
@@ -62,7 +61,6 @@ const Destination = () => {
 
   return (
     <div className="tourDetailsSection">
-      <h1>id</h1>
       <div className="tourDetailsHeader">
         <h1 className="text-center"> Tour Package Details</h1>
       </div>
@@ -77,7 +75,6 @@ const Destination = () => {
             </h2>
             <h4>Overview</h4>
             <p>{location.description}</p>
-            
           </div>
         </div>
         <div className="package col-lg-5 col-sm-10 mx-auto ">
